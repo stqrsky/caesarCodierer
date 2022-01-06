@@ -51,7 +51,9 @@ class ViewController: UIViewController {
             var outputString = ""
             
             for element in currentInput {
-                outputString = outputString + encode[element]!
+                if encode[element] != nil {
+                    outputString = outputString + encode[element]!
+                }
             }
             
             textInput.text = outputString
