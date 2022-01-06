@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             for element in currentInput {
                 if encode[element] != nil && outputString != nil {
                     outputString = outputString! + encode[element]!
-                } else if outputString == nil {
+                } else if outputString == nil && encode[element] != nil {
                     outputString = encode[element]!
                 }
             }
