@@ -2,5 +2,5 @@
 educational purpose
 ___
 <p align="center">
-  [![CaesarCodierer.gif](https://s10.gifyu.com/images/CaesarCodierer.gif)](https://gifyu.com/image/SSyWC)
+  <img src="https://s10.gifyu.com/images/CaesarCodierer.gif" width="150" height="300" alt="CardWarGame.gif" />
 </p>
