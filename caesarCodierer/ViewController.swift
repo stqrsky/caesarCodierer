@@ -8,6 +8,35 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let encode: [Character : String] =
+            ["a" : "b",
+             "b" : "c",
+             "c" : "d",
+             "d" : "e",
+             "e" : "f",
+             "f" : "g",
+             "g" : "h",
+             "h" : "i",
+             "i" : "j",
+             "j" : "k",
+             "k" : "l",
+             "l" : "m",
+             "m" : "n",
+             "n" : "o",
+             "o" : "p",
+             "p" : "q",
+             "q" : "r",
+             "r" : "s",
+             "s" : "t",
+             "t" : "u",
+             "u" : "v",
+             "v" : "w",
+             "w" : "x",
+             "x" : "y",
+             "y" : "z",
+             "z" : "a",
+             " " : " "]
 
     @IBOutlet weak var textInput: UITextField!
     
@@ -17,7 +46,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func encodeButtonTapped(_ sender: UIButton) {
-        print(textInput.text as Any)
+        if textInput.text != "" {
+            let currentInput = textInput.text!
+            var outputString = ""
+            
+            for element in currentInput {
+                outputString = outputString + encode[element]!
+            }
+            
+            textInput.text = outputString
+        }
     }
     
     
