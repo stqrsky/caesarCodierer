@@ -48,11 +48,13 @@ class ViewController: UIViewController {
     @IBAction func encodeButtonTapped(_ sender: UIButton) {
         if textInput.text != "" {
             let currentInput = textInput.text!
-            var outputString = ""
+            var outputString: String?
             
             for element in currentInput {
-                if encode[element] != nil {
-                    outputString = outputString + encode[element]!
+                if encode[element] != nil && outputString != nil {
+                    outputString = outputString! + encode[element]!
+                } else if outputString == nil {
+                    outputString = encode[element]!
                 }
             }
             
